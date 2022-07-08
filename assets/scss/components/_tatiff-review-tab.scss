@@ -1,0 +1,147 @@
+// tatiff-review-tab
+
+$tatiff-review-tab-border: 1px solid $service-bg;
+
+.tatiff-review-tab {
+  &_title {
+    @include d-flex-align-justify-space-between;
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      color: $form-title-color;
+    }
+
+    &_icon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+
+      small {
+        color: $primary;
+      }
+    }
+  }
+
+  &_service {
+    border: 1px solid $primary;
+    padding: 20px;
+    margin: 20px 0;
+
+    &-icon {
+      text-align: center;
+
+      &_img {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+
+      &_text {
+        margin-top: 1rem;
+        h4 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &-details {
+      padding-left: 3rem;
+      border-left: 1px solid $tatiff-review-tab-border;
+
+      ul {
+        li {
+          font-size: 1.4rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 0.8rem;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+
+          & > span {
+            color: $primary;
+          }
+
+          &::before {
+            content: "";
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            background-image: url("#{$images-path}/tariff/title-icon.svg");
+            background-repeat: no-repeat;
+            margin-right: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint("ipad-max") {
+  .tatiff-review-tab {
+    &_service {
+      margin: 1.8rem 0;
+      padding: 1rem 0;
+      &-icon {
+        border-bottom: 1px solid $tatiff-review-tab-border;
+        margin-bottom: 1rem;
+      }
+      &-details {
+        border-left: 0;
+        padding-left: 0;
+
+        ul {
+          li {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// rtl
+[direction="rtl"] {
+  .tatiff-review-tab_service {
+    &-details {
+      border-right: 1px solid #0000620f;
+      padding-right: 3rem;
+      padding-left: 0;
+      border-left: 0;
+
+      ul {
+        li {
+          font-size: 1.6rem;
+
+          &::before {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            margin-left: 0.7rem;
+            margin-right: 0;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+

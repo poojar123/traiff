@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 8px;
+  -webkit-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  line-height: 1.5;
+  // background-color: $body-bg;
+  font-size: $default-font-size;
+  @include custom-scroll-bar();
+}
+
+[theme-version="dark"] {
+  filter: grayscale(100%) contrast(100%);
+  -webkit-filter: grayscale(100%) contrast(100%);
+}

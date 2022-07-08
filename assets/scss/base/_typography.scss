@@ -1,0 +1,132 @@
+/* Typography */
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a,
+.btn {
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+// list typo
+.number-list {
+  li {
+    list-style: inherit;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+    // opacity: 0.8;
+    color: inherit;
+  }
+}
+.btn-link {
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+  }
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.underline {
+  text-decoration: underline;
+}
+// bg color
+@each $color, $value in $theme-colors {
+  .bg-#{$color} {
+    @include bg-color($value);
+  }
+}
+
+// color
+@each $color, $value in $theme-colors {
+  .text-#{$color} {
+    @include color($value);
+  }
+}
+
+// border radius
+.b-15 {
+  border-radius: 0;
+}
+
+.top-25 {
+  top: 25% !important;
+}
+.top-75 {
+  top: 75% !important;
+}
+.fs-50 {
+  font-size: 50px;
+}
+// bg color class
+.light-grey {
+  background-color: $body-bg;
+}
+.bg-blue {
+  background-color: $primary-bg;
+}
+.text-blue {
+  color: $primary-bg !important;
+}
+.bg-light-blue {
+  background-color: $input-bg;
+}
+
+// border
+.dashed-border {
+  border: 2px dashed $blue-light;
+}
+
+.page-title {
+  color: $primary-bg;
+  font-size: 3.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid $secondary-color;
+  display: inline-block;
+  padding-bottom: 0.8rem;
+}
+.inner-title {
+  color: $dark-list-text;
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+.rtl-direction {
+  direction: rtl;
+}
+.ltr-direction {
+  direction: ltr;
+}

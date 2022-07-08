@@ -1,0 +1,152 @@
+// COLOR
+
+$colors: (
+  light: rgba(0, 0, 0, 0.5),
+  gray-light: rgba(0, 0, 0, 0.75),
+  blue-light: rgba(1, 7, 96, 0.75),
+);
+$theme-colors: (
+  "primary": #485bfc,
+  "secondary": #24d3fd,
+  "success": #70b603,
+  "info": #5e29d2,
+  "warning": #e1a714,
+  "dark-warning": #b8741a,
+  "danger": #d9001b,
+  "light": #fbfbfb,
+  "dark": #1e283d,
+  "black": #000000,
+);
+
+$primary: #0000ff;
+$secondary: #24d3fd;
+$success: #70b603;
+$info: #5e29d2;
+$warning: #e1a714;
+$dark-warning: #b8741a;
+$danger: #d9001b;
+$light: #fbfbfb;
+$dark: #1e283d;
+$black: #000000;
+
+// other color
+$dark-blue: #000062;
+$white: #fff !default;
+$gray-light: #f1f0f6;
+$primary-bg: #010760;
+$secondary-color: #49c1ed;
+$body-bg: #edeeff;
+$red: #ff0000;
+$btn-link: #0b24fb;
+$primary-light-bg: #0b24fb;
+$blue-light: rgba(1, 7, 96, 0.75);
+
+// Fonts
+
+// $primary-font: "Loew Next Arabic";
+$primary-font: Loew Next Arabic, sans-serif;
+
+$default-font-size: 1.5rem; // 18px as base font size
+
+// font
+$extra-small-font-size: 1.2rem;
+$small-font-size: 1.4rem;
+$medium-font-size: 1.6rem;
+$large-font-size: 2rem;
+$extra-large-font-size: 2.2rem;
+$xl-large-font-size: 2.4rem;
+$xxl-large-font-size: 2.6rem;
+
+// path
+$images-path: "../img" !default;
+
+//fonts Path
+$fonts-path: "../fonts" !default;
+// icomoon
+
+// link
+$link-hover: #00d0fb;
+
+// button
+$btn-font-size: 2.25rem;
+$btn-width: 180px;
+$btn-previous: #5e29d2;
+
+// FORMS
+$input-bg: #f1f0f6; // out of design
+$input-text-color: rgba(0, 0, 0, 0.75);
+$input-border-radius: 0; // out of design
+// $input-placeholder-color: rgba(0, 0, 0, 0.5);
+$input-placeholder-color: rgba(0, 0, 0, 0.2);
+$input-font-size: 2rem;
+
+$input-padding-y: 1.6rem;
+$input-padding-x: 2.3rem;
+$input-line-height: 1;
+
+$input-height: 2.975rem;
+
+$form-title-color: #000000bf;
+
+// authentication
+$authentication-wrap: #f1f0f6; // out of design
+$login-wrap: #0b24fb;
+
+// dark mode
+$dark-body-bg: #181f39;
+$dark-primary-1: #1e2746;
+$dark-link: #b3b3b3;
+
+$dark-border-color: #333a54;
+
+$dark-light-text: rgba($white, 0.5) !default;
+
+$navbar-light-color: rgba($white, 0.8) !default;
+
+// list group
+$dark-list-text: #828690;
+
+// [theme-version="dark"] {}
+
+// Tariff
+
+$tf-font-size: 2.25rem;
+$tf-font-small-size: 2rem;
+/*
+service
+*/
+$service-bg: #0000620f;
+$service-border: #0000ff;
+/*
+terms-conditions
+*/
+$terms-conditions-bg: rgba(0, 0, 98, 0.06);
+$terms-conditions-color: #00000080;
+/*
+accordion
+*/
+$accordion-bg: #f0f0f6;
+$accordion-header-color: #404040;
+$accordion-border-radius: 0;
+
+// card
+$card-box-shadow: none;
+$card-spacing-y: 2.5rem;
+$card-padding-y: 2.5rem;
+$card-padding-x: 2.5rem;
+$action-transition-duration: 0.25s;
+$action-transition-timing-function: ease;
+$card-border-radius: 0; // out of design
+
+// step sidebar
+$step-color: #00006240;
+$step-inprogress: $primary;
+$step-success: #70b603;
+
+
+// TABLE
+$table-text-color: #010760;
+// $table-text-color-grey: #808080;
+$table-text-color-grey: #7f7cab;
+$table-text-action-color: #0b24fb;
+$table-cell-padding: 2rem 2rem;

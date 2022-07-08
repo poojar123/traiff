@@ -1,0 +1,265 @@
+/* Forms */
+
+.form-group {
+  margin-bottom: 2.6rem;
+  label {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    vertical-align: top;
+    color: $black;
+  }
+}
+.input-group-append,
+.input-group-prepend {
+  // color: $input-placeholder-color;
+  width: auto;
+  border: none;
+  .input-group-text {
+    padding: 0.5rem 0.75rem;
+    // color: $input-placeholder-color;
+  }
+}
+.form-check-input {
+  border-radius: 0 !important;
+}
+.form-control {
+  border: 0;
+  font-size: $input-font-size;
+  border-radius: $input-border-radius;
+  background-color: $input-bg;
+  padding: $input-padding-y $input-padding-x;
+  // color: $input-text-color;
+  @include transition(all, 0.3s, ease);
+  @include input-placeholder {
+    color: $input-placeholder-color;
+  }
+  &:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 1px solid $input-placeholder-color;
+    @include transition(all, 0.3s, ease);
+  }
+}
+textarea {
+  resize: none;
+  height: auto !important;
+  @include custom-scroll-bar();
+}
+select {
+  &.form-control {
+    padding: $input-padding-y $input-padding-x;
+    border: 0;
+    // color: $input-placeholder-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(#{$images-path}/icon/select-dropdown2.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 2rem;
+    &:focus {
+      outline: 1px solid $input-placeholder-color;
+    }
+  }
+  &.select-2 {
+    @include tr-drop-icon;
+  }
+}
+// tf-select
+.tf-select {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: $input-font-size;
+  .selectBtn {
+    padding: 1.6rem 2.3rem;
+    background-color: $input-bg;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 2rem;
+    @include tr-drop-icon;
+    color: $input-placeholder-color;
+
+    @include breakpoint("ipad-max") {
+      padding: 1rem 2.3rem;
+    }
+
+    &.toggle {
+      border-radius: 3px 3px 0 0;
+      &::after {
+        -webkit-transform: translateY(-50%) rotate(-135deg);
+        -ms-transform: translateY(-50%) rotate(-135deg);
+        transform: translateY(-50%) rotate(-135deg);
+      }
+    }
+  }
+  .selectDropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    z-index: 1;
+    background: $input-bg;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    visibility: hidden;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    .tf-option {
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      cursor: pointer;
+      &:hover {
+        background: $dark-blue;
+        color: $white;
+      }
+    }
+    .tf-label {
+      background-color: $white;
+      color: $terms-conditions-color;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      cursor: not-allowed;
+    }
+    &.toggle {
+      visibility: visible;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+      max-height: 400px;
+      overflow-y: auto;
+      @include custom-scroll-bar();
+    }
+  }
+}
+
+.date {
+  cursor: pointer;
+  // background-image: url(#{$images-path}/icon/date-icon.svg);
+  background-image: url(#{$images-path}/icon/cal-without-bg.svg);
+  background-position: 98%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+}
+.form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: $input-bg;
+  color: $input-placeholder-color;
+}
+// for checkbox
+.form-check {
+  .form-check-input {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0.5rem;
+    background-color: $input-bg;
+    border: 0;
+    &:focus {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    &:checked {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+// search-input icon
+.search-input {
+  .search-input-icon {
+    display: block;
+    height: auto;
+    line-height: 5rem;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
+    z-index: 2;
+  }
+  .form-control {
+    padding-left: 5rem;
+  }
+}
+
+@include breakpoint("ipad-max") {
+  .form-group {
+    margin-bottom: 1.5rem;
+    label {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .form-control {
+      padding: 1rem 2.3rem;
+    }
+  }
+  .search-input {
+    .search-input-icon {
+      line-height: 3.8rem;
+    }
+    .form-control {
+      padding-left: 5rem;
+    }
+  }
+}
+
+// rtl
+[direction="rtl"] {
+  select {
+    &.form-control {
+      background-position: 5%;
+    }
+  }
+  .date {
+    background-position: 0%;
+  }
+  .search-input {
+    .form-control {
+      padding-left: 0;
+      padding-right: 5rem;
+    }
+  }
+  .form-group {
+    label {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .tf-select {
+    .selectBtn {
+      background-position: 5%;
+    }
+  }
+}

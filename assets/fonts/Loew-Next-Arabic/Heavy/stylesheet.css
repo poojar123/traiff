@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('LoewNextArabic-Heavy.eot');
+    src: url('LoewNextArabic-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('LoewNextArabic-Heavy.woff2') format('woff2'),
+        url('LoewNextArabic-Heavy.woff') format('woff'),
+        url('LoewNextArabic-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

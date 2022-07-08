@@ -1,0 +1,55 @@
+// page title
+
+.form-title {
+  color: $form-title-color;
+  font-size: 3rem;
+  margin-bottom: 3.5rem;
+  font-weight: 900;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &::before {
+    content: url("#{$images-path}/tariff/title-icon.svg");
+    position: absolute;
+    left: -20px;
+  }
+}
+
+.form-link {
+  color: $dark-blue;
+  font-size: $tf-font-size;
+}
+
+@include breakpoint("ipad-max") {
+  .form-title {
+    font-size: 2rem;
+  }
+}
+
+// for inner title
+
+.form-inner-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  @extend .form-title;
+}
+
+// rtl
+
+[direction="rtl"] {
+  .form-title {
+    &::before {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+      right: -20px;
+      left: unset;
+    }
+  }
+}

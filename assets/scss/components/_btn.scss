@@ -1,0 +1,95 @@
+// btn
+
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 2.3rem;
+  border-radius: 0;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  background-color: $dark-blue;
+  color: $white;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: $white;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+    @include boxshadow;
+  }
+
+  &.btn-tf {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    font-size: $btn-font-size;
+  }
+
+  &.btn-previous {
+    background-color: $btn-previous;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: $white;
+      border: 1px solid $btn-previous;
+      color: $btn-previous;
+      @include boxshadow;
+    }
+  }
+
+  &.btn-outline-save {
+    background-color: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &.btn-outline-primary {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: $white;
+    color: $black;
+    padding: 1.2rem 3.8rem;
+
+    &.active {
+      @include btn-outline;
+    }
+  }
+
+  &-check {
+    &:checked + .btn-outline-primary,
+    &:active + .btn-outline-primary {
+      @include btn-outline;
+    }
+  }
+
+  &-lg {
+    padding: 2rem;
+    font-size: 1.8rem;
+  }
+}
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value);
+  }
+}
+
+.btn-check {
+  top: 0;
+}
+@include breakpoint("ipad-max") {
+  .btn {
+    &.btn-lg {
+      font-size: $btn-font-size;
+    }
+  }
+}
+
+// rtl
+[direction="rtl"] {
+  .btn {
+    line-height: 1;
+  }
+}

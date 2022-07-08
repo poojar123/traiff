@@ -1,0 +1,27 @@
+// terms-conditions
+
+.terms-conditions {
+  &_list {
+    margin-bottom: 5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &_text {
+    font-size: $tf-font-small-size;
+    background-color: $terms-conditions-bg;
+    padding: 3rem 2rem;
+    color: $terms-conditions-color;
+  }
+}
+
+// input-wrap
+.input-wrap {
+  margin-top: 2rem;
+  &_list {
+    margin-bottom: 4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

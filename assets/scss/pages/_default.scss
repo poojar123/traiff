@@ -1,0 +1,66 @@
+// .main {
+//   @include transition(all, 0.2s, ease);
+//   min-height: calc(100vh - 30rem);
+// }
+
+// @include breakpoint("ipad-max") {
+//   .main {
+//     min-height: calc(100vh - 10rem);
+//   }
+// }
+
+$main-wrapper-height: 650px; //for making middle section on viewport
+$landing-bg: rgb(237 238 255);
+
+main {
+  min-height: $main-wrapper-height;
+  height: 100%;
+
+  @include breakpoint("ipad-max") {
+    min-height: 100%;
+  }
+}
+
+section {
+  padding: 4.5rem 0;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  padding: 4.5rem 8rem;
+  // max-height: $main-wrapper-height;
+  max-height: auto;
+  overflow-y: auto;
+  @include custom-scroll-bar();
+
+  @include breakpoint("ipad-max") {
+    padding: 3.5rem;
+  }
+  @include breakpoint("desktop-min") {
+    // overflow: hidden;
+    max-height: $main-wrapper-height;
+  }
+  @media screen and (max-width: 1024px) {
+    max-height: 100%;
+  }
+}
+
+.main-wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  @include breakpoint("desktop-max") {
+    height: auto;
+  }
+}
+
+.landing-wrapper {
+  background-color: $landing-bg;
+}

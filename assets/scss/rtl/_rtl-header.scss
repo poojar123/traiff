@@ -1,0 +1,22 @@
+// header rtl
+[direction="rtl"] {
+  header {
+    .header-right {
+      & > li {
+        padding-left: 2.4rem;
+        padding-right: 0;
+      }
+      .header-profile {
+        & > a.nav-link {
+          .header-info {
+            padding-right: 0;
+            padding-left: 2.2rem;
+          }
+          .short-name{
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

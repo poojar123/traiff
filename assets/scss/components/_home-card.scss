@@ -1,0 +1,201 @@
+.animated-card {
+  width: 100%;
+  height: 250px;
+  @include boxshadow();
+  margin-bottom: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  text-align: center;
+  background-color: $white;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $dark-blue;
+    right: 0;
+    bottom: -250px;
+    border-radius: 0px;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: 2px solid $dark-blue;
+  }
+  &:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    background-position: center -215px;
+    &:before {
+      bottom: 0;
+    }
+    img,
+    .animated-card_count {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    h3 {
+      color: $white;
+      margin: 30px 0;
+    }
+    .btn {
+      -webkit-transition-delay: 0.9s;
+      -o-transition-delay: 0.9s;
+      transition-delay: 0.9s;
+      opacity: 1;
+      margin-top: 10px;
+    }
+  }
+  img {
+    display: block;
+    margin: 50px auto 0;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 120px;
+    height: auto;
+    position: relative;
+    opacity: 1;
+  }
+  .animated-card_count {
+    display: block;
+    margin: 50px auto 0;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 120px;
+    position: relative;
+    opacity: 1;
+    color: $dark-blue;
+    font-size: 9.5rem;
+    font-weight: 850;
+    line-height: 16.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: $dark-blue;
+    position: relative;
+  }
+  .btn {
+    position: relative;
+    border: 1px solid $secondary-color;
+    opacity: 0;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    color: $secondary-color;
+    &:hover {
+      -webkit-transition-delay: 0s !important;
+      -o-transition-delay: 0s !important;
+      transition-delay: 0s !important;
+      color: $white;
+      background-color: $secondary-color;
+    }
+  }
+  &_img {
+    height: 120px;
+  }
+  .animated-card__inner {
+    position: absolute;
+    width: 100%;
+    height: 71px;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    bottom: 0;
+  }
+  .message-number {
+    border-radius: 90px;
+    color: $white;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 900;
+    padding: 0.7rem;
+    min-width: 3.3rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    &.danger {
+      background: $red;
+    }
+  }
+}
+
+// new cards
+.home-cards {
+  background-image: url(../img/tariff/sidebar-bg-l.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 25%;
+}
+.home-cards-warrper {
+  background: #fff;
+  padding: 10px 20px;
+  border-left: 5px solid #0b24fb;
+  position: relative;
+
+  &_icon {
+    height: 45px;
+    width: auto;
+    img {
+      height: 45px;
+    }
+    &-number {
+      font-weight: 700;
+      font-size: 4.5rem;
+      color: #0b24fb;
+    }
+  }
+  &-name {
+    text-transform: capitalize;
+    color: #010760;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+  &-link {
+    font-size: 4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, 50%);
+    color: #010760;
+  }
+}
+
+@include breakpoint(ipad-max) {
+  .home-cards-warrper {
+    margin-bottom: 1.5rem;
+
+    &-link {
+      transform: translate(-15%, 50%);
+    }
+  }
+}
+
+[theme-version="dark"] {
+  .animated-card {
+    background-color: $dark-primary-1;
+    &:before {
+      background-color: $dark-primary-1;
+      border-color: $dark-light-text;
+    }
+    .animated-card_count {
+      color: $dark-light-text;
+    }
+    h3 {
+      color: $dark-light-text;
+    }
+  }
+}

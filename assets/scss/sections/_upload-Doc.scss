@@ -1,0 +1,168 @@
+// upload-doc
+.upload-doc-wrap {
+  background-color: $primary-bg;
+  margin: 0 1.5rem;
+  padding: 2rem;
+  border-radius: 0;
+}
+.upload-wrap {
+  @include d-flex-align-justify-space-between();
+  &-text {
+    font-size: 1.6rem;
+    color: $white;
+    span {
+      padding-left: 1rem;
+    }
+  }
+}
+.upload-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+  padding: 4px 20px 4px 10px;
+  // border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  color: $white;
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px solid #dfe1e5;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  input[type="file"] {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .file-upload-text {
+    margin-left: 1.5rem;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    font-size: 2.4rem;
+  }
+  .file-success-text {
+    margin-left: 1rem;
+    z-index: 1;
+    .file-name {
+      i {
+        vertical-align: bottom;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.upload-btn {
+  background-color: $primary-bg;
+  // border-radius: 4rem 1.5rem 1.5rem 4rem;
+  padding: 0.3rem 1.5rem 0.3rem 0.3rem;
+  margin-right: 1.5rem;
+  span.file-upload-text {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 5rem;
+  }
+}
+
+// Uploaded PDF Preview
+.pdf-preview-wrap {
+  border: 1px solid #000000;
+  border-radius: 0;
+  padding: 2.3rem;
+  max-width: 20rem;
+  width: 100%;
+  max-height: 22rem;
+  height: 100%;
+  margin-left: 3rem;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@include breakpoint("ipad-max") {
+  .upload-doc-wrap {
+    margin: 0 0.5rem;
+    padding: 1rem;
+    .upload-wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      .upload-wrapper {
+        img {
+          width: 5rem;
+        }
+        .file-upload-text {
+          font-size: 1.2rem;
+        }
+      }
+      &-text {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .pdf-preview-wrap {
+    max-width: inherit;
+    margin-left: 0;
+  }
+}
+@include breakpoint("mobile-max") {
+  .upload-wrapper {
+    img {
+      width: 5rem;
+    }
+    .file-upload-text {
+      font-size: 1.8rem;
+    }
+  }
+  .upload-doc-wrap {
+    .upload-wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+}
+
+[direction="rtl"] {
+  .upload-wrapper {
+    .file-upload-text {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+}

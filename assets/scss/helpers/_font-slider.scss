@@ -1,0 +1,140 @@
+.font-slider {
+  position: absolute;
+  background: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 10px #999;
+  box-shadow: 0 3px 10px #999;
+  line-height: 18px;
+  opacity: 0.01;
+  padding: 15px 40px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 9;
+}
+
+.font-slider:after {
+  bottom: 99%;
+  right: 8%;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  content: " ";
+  height: 0;
+  margin-left: -10px;
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+}
+
+.font-slider-container:focus .font-slider,
+.font-slider-container:focus-within .font-slider,
+.font-slider-container:hover .font-slider {
+  opacity: 1;
+  -webkit-transform: translateY(-0.5em);
+  -ms-transform: translateY(-0.5em);
+  transform: translateY(-0.5em);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+  -o-transition-delay: 0s, 0s, 0.3s;
+  transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the slider will be visible while the other styles transition */
+  z-index: 9999;
+}
+
+.fs_slider {
+  font-size: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  max-width: 12rem;
+  z-index: 9;
+}
+
+.fs_slider::-webkit-slider-runnable-track {
+  background: #eaeae9;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.fs_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-box-shadow: 1px 1px 3px #bbb;
+  box-shadow: 1px 1px 3px #bbb;
+  background-color: $primary;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  [theme-version="dark"] {
+    background-color: $dark-primary-1;
+  }
+}
+
+.fs_slider:focus {
+  outline: none;
+}
+
+.fs_slider:focus::-webkit-slider-runnable-track {
+  background: #eaeae9;
+}
+
+.fs_slider input[type="range"]::-ms-thumb {
+  border: none;
+  border-radius: 50%;
+  background: $primary;
+  height: 16px;
+  width: 16px;
+  [theme-version="dark"] {
+    background-color: $dark-primary-1;
+  }
+}
+
+.fs_slider input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 6px 0;
+  color: transparent;
+  height: 5px;
+  width: 100%;
+}
+
+.fs_slider input[type="range"]::-ms-fill-lower {
+  background: #eaeae9;
+  border-radius: 10px;
+}
+
+.fs_slider input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.fs_slider input[type="range"]:focus::-ms-fill-lower {
+  background: #eaeae9;
+}
+
+.fs_slider input[type="range"]:focus::-ms-fill-upper {
+  background: #ddd;
+}
+.range-min,
+.range-max {
+  position: absolute;
+  bottom: 14px;
+}
+
+.range-min {
+  left: 16px;
+  color: #555;
+  font-size: 12px;
+}
+
+.range-max {
+  right: 16px;
+  color: #555;
+  font-size: 12px;
+}

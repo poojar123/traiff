@@ -1,0 +1,274 @@
+/* Tables */
+
+.table {
+    margin-bottom: 2rem;
+    // text-align: center;
+    thead {
+      text-align: center;
+      th {
+        background-color: $secondary !important;
+        color: $white;
+        font-size: 1.8rem;
+        &.head-input {
+          label {
+            margin-bottom: 1rem;
+          }
+          .form-control {
+            width: 16rem;
+            height: 2rem;
+            font-size: 1.4rem;
+            background-color: $white;
+            // border-radius: 10rem;
+            margin: 0 auto;
+          }
+          select.form-control {
+            height: 2.9rem;
+            // width: auto;
+            background-color: $white;
+            // border-radius: 10rem;
+            background-size: 0.8rem;
+            padding: 0 1rem;
+            background-position-x: 90%;
+            color: $table-text-color-grey;
+          }
+        }
+      }
+      .sort {
+        background-repeat: no-repeat;
+        background-position: center right 0;
+        cursor: pointer;
+      }
+      .sorting {
+        background-image: url(../img/icon/sort_both.svg);
+      }
+      .sorting_desc {
+        background-image: url(../img/icon/sort_desc.svg);
+        background-position: bottom 45% right 0;
+      }
+      .sorting_asc {
+        background-image: url(../img/icon/sort_asc.svg);
+        background-position: top 45% right 0;
+      }
+    }
+    tbody {
+      text-align: center;
+    }
+    th,
+    td {
+      vertical-align: middle;
+      padding: $table-cell-padding;
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-weight: 500;
+    }
+    td {
+      font-size: $medium-font-size;
+      color: $table-text-color-grey;
+      &.table-text-fade {
+        color: $table-text-color-grey;
+      }
+      .badge {
+        margin-bottom: 0;
+        padding: 1rem 3rem;
+      }
+      .table-action {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 5px 1.5rem;
+        border-radius: 10px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        a {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          background-color: $white;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin-right: 1.5rem;
+          place-items: center;
+          position: relative;
+          border-radius: 0;
+          padding: 1rem 1.4rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .table-count-label {
+          font-size: 1rem;
+          font-weight: 850;
+          background-color: $red;
+          width: 1.5rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          color: $white;
+          position: absolute;
+          right: 6px;
+          border-radius: 50%;
+        }
+        &.table-action-marge {
+          a {
+            margin-right: 0;
+         
+          }
+        }
+      }
+      span {
+        font-size: 1.2rem;
+        color: $table-text-action-color;
+      }
+    }
+    tr {
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+    &.select-table {
+      tr {
+        td {
+          &:first-child {
+            padding-right: 10px;
+          }
+        }
+      }
+      th {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        padding-right: 5px;
+        padding-left: 0;
+        .form-check {
+          margin-bottom: 0;
+          width: 20px;
+        }
+      }
+      td {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 0;
+        .form-check {
+          width: 20px;
+        }
+        h6 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          color: #000;
+          margin-bottom: 5px;
+        }
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          //   color: $text-muted;
+          margin-bottom: 0;
+        }
+        img {
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          margin-right: 1.5rem;
+        }
+        .max-width-progress-wrap {
+          width: 120px;
+        }
+        .form-check {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $gray-light;
+    td {
+      color: $table-text-color;
+    }
+  }
+  .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: $white;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+    @include custom-scroll-bar();
+  }
+  
+  @include breakpoint("ipad-max") {
+    .list-table {
+      font-size: 2.4rem;
+      tbody {
+        text-align: start;
+      }
+      .list-table-item {
+        &--title {
+          span {
+            font-size: 1.4rem;
+            // color: $list-light-text;
+          }
+        }
+        &--des {
+          strong {
+            font-size: 1.4rem;
+            // color: $list-dark-text;
+          }
+        }
+      }
+    }
+  }
+  
+  // rtl
+  [direction="rtl"] {
+    .table {
+      thead {
+        th {
+          &.head-input {
+            select.form-control {
+              background-position-x: 10%;
+            }
+          }
+        }
+        .sort {
+          background-position: center left 0;
+        }
+      }
+      td {
+        .table-action {
+          a {
+            margin-left: 1.5rem;
+            margin-right: 0;
+            &:last-child {
+              margin-left: 0;
+            }
+          }
+          &.table-action-marge {
+            a {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+ 

@@ -1,0 +1,186 @@
+#authentication-wrapper {
+  background: $authentication-wrap;
+}
+.authentication-wrap {
+  padding: 7rem 0;
+  height: 100%;
+}
+.back-con {
+  margin-bottom: 3rem;
+  a {
+    color: $primary-bg;
+    font-size: 2.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.265em;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.auth-form {
+  position: relative;
+  border-radius: 0;
+  padding: 2.2rem 5rem;
+  &.register {
+    // &::after {
+    //   content: url("../img/web/register-bg-line.png");
+    //   display: block;
+    //   position: absolute;
+    //   right: -10rem;
+    //   top: 0;
+    //   top: -20px;
+    // }
+  }
+  .auth-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 2.5rem 0 4rem 0;
+  }
+  &.light {
+    background-color: $white;
+    h4 {
+      color: $primary-bg;
+    }
+  }
+  &.login-wrap {
+    background-color: $login-wrap;
+    h4 {
+      color: $white;
+    }
+    .form-control {
+      background-color: $white;
+    }
+  }
+}
+.enter-otp {
+  padding: 3.2rem 5rem;
+  .auth-title {
+    margin: 2.6rem 0;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .form-control {
+    font-size: 2.5rem;
+    padding: 1rem;
+    @include input-placeholder {
+      color: $white;
+    }
+  }
+  .otp-inner-wrap {
+    margin: 3.5rem 0 5rem 0;
+  }
+}
+
+.already-registered-wrap {
+  p {
+    margin-bottom: 1.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+// error haandling
+.form-control.invalid-input {
+  border: 2px solid $red;
+  background-color: $white;
+  &:focus {
+    outline: 0;
+  }
+}
+.error-message {
+  padding: 0.5rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: $red;
+  font-size: 1.2rem;
+  @include transition(all, 0.3s, ease-in);
+  i {
+    padding-right: 0.2rem;
+  }
+}
+@include breakpoint("ipad-max") {
+  .auth-form {
+    padding: 2rem 1.5rem;
+    &.register {
+      &::after {
+        display: none;
+      }
+    }
+    .auth-title {
+      margin: 1.5rem 0 2rem;
+      font-size: 2.5rem;
+    }
+  }
+  .enter-otp {
+    p {
+      font-size: 1.2rem;
+    }
+    .form-control {
+      padding: 0.5rem 1.3rem;
+    }
+  }
+
+  .already-registered-wrap {
+    margin-top: 2.5rem;
+  }
+}
+
+[direction="rtl"] {
+  .auth-form {
+    &.register::after {
+      left: -10rem;
+      right: initial;
+    }
+  }
+}
+
+[theme-version="dark"] {
+  #authentication-wrapper {
+    background: $dark-body-bg;
+  }
+  .back-con a {
+    color: $dark-light-text;
+    &:hover {
+      color: $navbar-light-color;
+    }
+  }
+  .auth-form {
+    &.light {
+      background-color: $dark-primary-1;
+      h4 {
+        color: $dark-link;
+      }
+    }
+    &.login-wrap {
+      background-color: $dark-primary-1;
+      h4 {
+        color: $dark-link;
+      }
+      .form-control {
+        background-color: $dark-body-bg;
+        color: $white;
+        border-color: $dark-border-color;
+      }
+    }
+  }
+  .enter-otp p {
+    color: $dark-light-text;
+  }
+  .already-registered-wrap {
+    p {
+      color: $dark-link;
+    }
+    .btn-border-primary {
+      border-color: $secondary;
+      color: $secondary;
+      &:hover {
+        background-color: $secondary;
+        color: $white;
+      }
+    }
+  }
+}
